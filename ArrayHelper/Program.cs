@@ -64,16 +64,58 @@ namespace ArrayHelper
             arr[arr.Length] = el;
             return arr.Length;
         }
+        public static string Shift(ref string[] arr)
+        {
+            string el = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+                arr[i] = arr[i+1];
+            Array.Resize(ref arr, arr.Length - 1);
+            return el;
+        }
+        public static int Shift(ref int[] arr)
+        {
+            int el = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+                arr[i] = arr[i+1];
+            Array.Resize(ref arr, arr.Length - 1);
+            return el;
+        }
+        public static double Shift(ref double[] arr)
+        {
+            double el = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+                arr[i] = arr[i+1];
+            Array.Resize(ref arr, arr.Length - 1);
+            return el;
+        }
+        public static decimal Shift(ref decimal[] arr)
+        {
+            decimal el = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+                arr[i] = arr[i+1];
+            Array.Resize(ref arr, arr.Length - 1);
+            return el;
+        }
+        public static float Shift(ref float[] arr)
+        {
+            float el = arr[0];
+            for (int i = 0; i < arr.Length - 1; i++)
+                arr[i] = arr[i+1];
+            Array.Resize(ref arr, arr.Length - 1);
+            return el;
+        }
+
     }
     class Program
     {
         static void Main(string[] args)
         {
-            double[] arr1 = {1, 2, 3, 4, 5, 6, 7};
-            Console.WriteLine(Array_Helper.Pop(ref arr1));
+            string[] arr1 = {"1", "2"," 3", "4", "5", "6", "7"};
+            Console.WriteLine(Array_Helper.Shift(ref arr1));
+
             foreach (var item in arr1)
             {   
-                Console.Write(item);
+                Console.Write(" " + item);
             }
             Console.WriteLine(arr1.Length);
         }
