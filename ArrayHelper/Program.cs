@@ -34,6 +34,36 @@ namespace ArrayHelper
             Array.Resize(ref arr, arr.Length - 1);
             return el;
         }
+        public static int Push(ref string[] arr, string el)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length] = el;
+            return arr.Length;
+        }
+        public static int Push(ref int[] arr, int el)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length] = el;
+            return arr.Length;
+        }
+        public static int Push(ref double[] arr, double el)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length] = el;
+            return arr.Length;
+        }
+        public static int Push(ref decimal[] arr, decimal el)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length] = el;
+            return arr.Length;
+        }
+        public static int Push(ref float[] arr, float el)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length] = el;
+            return arr.Length;
+        }
     }
     class Program
     {
